@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author Asus
  */
-public class datasetKamar {
+public class dataKamar {
     private ArrayList <Integer> kode;
     private ArrayList <String> tipe;
     private ArrayList <String> kapasitas;
@@ -20,7 +20,7 @@ public class datasetKamar {
     private ArrayList <Double> hargaWeekend;
 
     
-    public datasetKamar(){
+    public dataKamar(){
       kode = new ArrayList<Integer>();
       tipe = new ArrayList<String>();
       kapasitas = new ArrayList<String>();

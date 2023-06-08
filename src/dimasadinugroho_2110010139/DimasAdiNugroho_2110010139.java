@@ -7,6 +7,7 @@ package dimasadinugroho_2110010139;
 import PenyewaanKamarHotel.*;
 import javax.swing.JOptionPane;
 import java.util.Scanner;
+import forms.frameUtama;
 
 /**
  *
@@ -20,7 +21,7 @@ public class DimasAdiNugroho_2110010139 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        tamu tamu = new tamu();
+        /*tamu tamu = new tamu();
         tamu.setTamu(2);
         System.out.println(tamu.getTamu());
         
@@ -38,6 +39,11 @@ public class DimasAdiNugroho_2110010139 {
         
         karyawan Karyawan = new karyawan();
         Karyawan.setKaryawan(1);
-        System.out.println(Karyawan.getKaryawan());
+        System.out.println(Karyawan.getKaryawan()); */
+        
+        frameUtama myFrame = new frameUtama();
+        
+        myFrame.setVisible(true);
+        
     }
 }

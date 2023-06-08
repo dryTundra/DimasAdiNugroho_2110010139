@@ -10,10 +10,10 @@ import java.util.ArrayList;
  *
  * @author Asus
  */
-public class datasetKaryawan {
+public class dataKaryawan {
     private ArrayList<String> nama;
     private ArrayList<String> nik;
-    private ArrayList<String> tempat;
+    private ArrayList<String> tmplahir;
     //tgllahir
     private ArrayList<String> agama;
     private ArrayList<String> jnskel;
@@ -23,10 +23,10 @@ public class datasetKaryawan {
     private ArrayList<String> telp;
     private ArrayList<String> password;
     
-    public datasetKaryawan(){
+    public dataKaryawan(){
         nama = new ArrayList<String>();
         nik = new ArrayList<String>();
-        tempat = new ArrayList<String>();
+        tmplahir = new ArrayList<String>();
         //tgllahir
         agama = new ArrayList<String>();
         jnskel = new ArrayList<String>();
@@ -47,12 +47,22 @@ public class datasetKaryawan {
     
     //
     
-    public void insertTempat(String isi){
-        this.tempat.add(isi);
+    public void insertNIK(String isi){
+        this.nik.add(isi);
     }
     
-    public ArrayList <String> getRecordTempat(){
-        return this.tempat;
+    public ArrayList <String> getRecordNIK(){
+        return this.nik;
+    }
+    
+    //
+    
+    public void insertTmpLahir(String isi){
+        this.tmplahir.add(isi);
+    }
+    
+    public ArrayList <String> getRecordTmpLahir(){
+        return this.tmplahir;
     }
     
     //
@@ -115,7 +125,7 @@ public class datasetKaryawan {
         this.telp.add(isi);
     }
     
-    public ArrayList <String> getRecorTelp(){
+    public ArrayList <String> getRecordTelp(){
         return this.telp;
     }
     

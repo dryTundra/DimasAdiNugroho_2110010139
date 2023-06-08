@@ -10,13 +10,13 @@ import java.util.ArrayList;
  *
  * @author Asus
  */
-public class datasetTamu {
+public class dataTamu {
     private ArrayList<String> noKTP;
     private ArrayList<String> alamatTamu;
     private ArrayList<String> namaTamu;
     private ArrayList<String> noTelp;
     
-    public datasetTamu(){
+    public dataTamu(){
         noKTP = new ArrayList<String>();
         alamatTamu = new ArrayList<String>();
         namaTamu = new ArrayList<String>();
@@ -33,21 +33,21 @@ public class datasetTamu {
     
     // 
     
-    public void insertAlamatTamu(String isi){
+    public void insertAlamat(String isi){
         this.alamatTamu.add(isi);
     }
     
-    public ArrayList <String> getRecordAlamatTamu(){
+    public ArrayList <String> getRecordAlamat(){
         return this.alamatTamu;
     }
     
     // 
     
-    public void insertNamaTamu(String isi){
+    public void insertNmTamu(String isi){
         this.namaTamu.add(isi);
     }
     
-    public ArrayList <String> getRecordNamaTamu(){
+    public ArrayList <String> getRecordNmTamu(){
         return this.namaTamu;
     }
     

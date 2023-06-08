@@ -10,14 +10,14 @@ import java.util.ArrayList;
  *
  * @author Asus
  */
-public class datasetLunas {
+public class dataLunas {
     private ArrayList<String> nolunas;
     //tgl
     private ArrayList<Double> total;
     private ArrayList<Double> ubay;
     private ArrayList<Double> ukem;
     
-    public datasetLunas(){
+    public dataLunas(){
         nolunas = new ArrayList<String>();
         //tgl
         total = new ArrayList<Double>();
