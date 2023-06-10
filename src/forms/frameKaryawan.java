@@ -4,14 +4,16 @@
  */
 package forms;
 import dataset.dataKaryawan;
+import java.util.Date;
 import javax.swing.JOptionPane;
+
 
 /**
  *
  * @author Asus
  */
 public class frameKaryawan extends javax.swing.JFrame {
-    dataKaryawan dataKaryawan;
+    dataKaryawan karyawan;
 
     /**
      * Creates new form frameKaryawan
@@ -19,7 +21,8 @@ public class frameKaryawan extends javax.swing.JFrame {
     public frameKaryawan() {
         initComponents();
         this.setLocationRelativeTo(null);
-        dataKaryawan = new dataKaryawan();
+        karyawan = new dataKaryawan();
+        
     }
 
     /**
@@ -56,6 +59,8 @@ public class frameKaryawan extends javax.swing.JFrame {
         cmbJabatan = new javax.swing.JComboBox<>();
         btnTampilDataKaryawan = new javax.swing.JButton();
         txtIndex = new javax.swing.JTextField();
+        btnKaryawanToKamar = new javax.swing.JButton();
+        btnKaryawanToTamu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -113,6 +118,20 @@ public class frameKaryawan extends javax.swing.JFrame {
 
         txtIndex.setText("0");
 
+        btnKaryawanToKamar.setText("Data Kamar");
+        btnKaryawanToKamar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKaryawanToKamarActionPerformed(evt);
+            }
+        });
+
+        btnKaryawanToTamu.setText("Data Tamu");
+        btnKaryawanToTamu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKaryawanToTamuActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -142,7 +161,7 @@ public class frameKaryawan extends javax.swing.JFrame {
                             .addComponent(txtAgama, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
                             .addComponent(cmbJnsKel, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtNoRek, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                            .addComponent(txtAlamat, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                            .addComponent(txtAlamat, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
                             .addComponent(txtTelp, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
                             .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
                             .addComponent(txtNIK, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
@@ -153,7 +172,12 @@ public class frameKaryawan extends javax.swing.JFrame {
                         .addComponent(btnTampilDataKaryawan))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(85, 85, 85)
-                        .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnKaryawanToTamu)
+                            .addComponent(btnKaryawanToKamar))))
                 .addContainerGap(133, Short.MAX_VALUE))
         );
 
@@ -168,18 +192,25 @@ public class frameKaryawan extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(txtNIK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnKaryawanToKamar)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(txtTmpLahir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(txtTglLahir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(txtTmpLahir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(7, 7, 7)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(txtTglLahir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(btnKaryawanToTamu)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
@@ -200,22 +231,22 @@ public class frameKaryawan extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
                     .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(txtTelp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addComponent(txtTelp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11)
                             .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnSimpanDataKaryawan)
                             .addComponent(btnTampilDataKaryawan))
                         .addGap(32, 32, 32))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(94, 94, 94))))
@@ -234,41 +265,62 @@ public class frameKaryawan extends javax.swing.JFrame {
 
     private void btnSimpanDataKaryawanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanDataKaryawanActionPerformed
         // TODO add your handling code here:
-        dataKaryawan.insertNIK(txtNIK.getText());
-        dataKaryawan.insertNama(txtNama.getText());
-        dataKaryawan.insertTmpLahir(txtTmpLahir.getText());
+        karyawan.insertNIK(txtNIK.getText());
+        karyawan.insertNama(txtNama.getText());
+        karyawan.insertTmpLahir(txtTmpLahir.getText());
+        karyawan.insertTglLahir(txtTglLahir.getText());
+        karyawan.insertAgama(txtAgama.getText());
+        karyawan.insertJnsKel(cmbJnsKel.getSelectedItem().toString());
+        karyawan.insertJabatan(cmbJabatan.getSelectedItem().toString());
+        karyawan.insertNoRek(txtNoRek.getText());
+        karyawan.insertAlamat(txtAlamat.getText());
+        karyawan.insertTelp(txtTelp.getText());
+        karyawan.insertPassword(txtPassword.getText());
+        
+        JOptionPane.showMessageDialog(this, "Data Karyawan Berhasil Disimpan");
+        
+        txtNIK.setText("");
+        txtNama.setText("");
+        txtTmpLahir.setText("");
         //tglLahir
-        dataKaryawan.insertAgama(txtAgama.getText());
-        dataKaryawan.insertJnsKel(cmbJnsKel.getSelectedItem().toString());
-        dataKaryawan.insertJabatan(cmbJabatan.getSelectedItem().toString());
-        dataKaryawan.insertNoRek(txtNoRek.getText());
-        dataKaryawan.insertAlamat(txtAlamat.getText());
-        dataKaryawan.insertTelp(txtTelp.getText());
-        dataKaryawan.insertPassword(txtPassword.getText());
-        
-        JOptionPane.showMessageDialog(this, "Data Berhasil Disimpan");
-        
+        txtAgama.setText("");
+        cmbJnsKel.setSelectedIndex(0);
+        cmbJabatan.setSelectedIndex(0);
+        txtNoRek.setText("");
+        txtAlamat.setText("");
+        txtTelp.setText("");
+        txtPassword.setText("");
     }//GEN-LAST:event_btnSimpanDataKaryawanActionPerformed
 
     private void btnTampilDataKaryawanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampilDataKaryawanActionPerformed
         // TODO add your handling code here:
         int i = Integer.valueOf(txtIndex.getText());
         
-        String isiDataKaryawan = "NIK : "+dataKaryawan.getRecordNIK().get(i)+
-                              "\nNama : "+dataKaryawan.getRecordNama().get(i)+
-                              "\nTempat Lahir : "+dataKaryawan.getRecordTmpLahir().get(i)+
+        String isiDataKaryawan = "NIK : "+karyawan.getRecordNIK().get(i)+
+                              "\nNama : "+karyawan.getRecordNama().get(i)+
+                              "\nTempat Lahir : "+karyawan.getRecordTmpLahir().get(i)+
                               //tglLahir
-                              "\nAgama : "+dataKaryawan.getRecordAgama().get(i)+
-                              "\nJenis Kelamin : "+dataKaryawan.getRecordJnsKel().get(i)+
-                              "\nJabatan : "+dataKaryawan.getRecordJabatan().get(i)+
-                              "\nNo Rekening : "+dataKaryawan.getRecordNoRek().get(i)+
-                              "\nAlamat : "+dataKaryawan.getRecordAlamat().get(i)+
-                              "\nTelpon : "+dataKaryawan.getRecordTelp().get(i)+
-                              "\nPassword : "+dataKaryawan.getRecordPassword().get(i);
+                              "\nAgama : "+karyawan.getRecordAgama().get(i)+
+                              "\nJenis Kelamin : "+karyawan.getRecordJnsKel().get(i)+
+                              "\nJabatan : "+karyawan.getRecordJabatan().get(i)+
+                              "\nNo Rekening : "+karyawan.getRecordNoRek().get(i)+
+                              "\nAlamat : "+karyawan.getRecordAlamat().get(i)+
+                              "\nTelpon : "+karyawan.getRecordTelp().get(i)+
+                              "\nPassword : "+karyawan.getRecordPassword().get(i);
         
         JOptionPane.showMessageDialog(this, isiDataKaryawan);
         
     }//GEN-LAST:event_btnTampilDataKaryawanActionPerformed
+
+    private void btnKaryawanToKamarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKaryawanToKamarActionPerformed
+        // TODO add your handling code here:
+        new frameKamar().setVisible(true);
+    }//GEN-LAST:event_btnKaryawanToKamarActionPerformed
+
+    private void btnKaryawanToTamuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKaryawanToTamuActionPerformed
+        // TODO add your handling code here:
+        new frameTamu().setVisible(true);
+    }//GEN-LAST:event_btnKaryawanToTamuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -306,6 +358,8 @@ public class frameKaryawan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnKaryawanToKamar;
+    private javax.swing.JButton btnKaryawanToTamu;
     private javax.swing.JButton btnSimpanDataKaryawan;
     private javax.swing.JButton btnTampilDataKaryawan;
     private javax.swing.JComboBox<String> cmbJabatan;

@@ -3,12 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package forms;
+import dataset.dataInchas;
 
 /**
  *
  * @author Asus
  */
+import dataset.dataInchas;
+import javax.swing.JOptionPane;
+
 public class frameInchas extends javax.swing.JFrame {
+    dataInchas data;
 
     /**
      * Creates new form frameInchas
@@ -16,6 +21,7 @@ public class frameInchas extends javax.swing.JFrame {
     public frameInchas() {
         initComponents();
         this.setLocationRelativeTo(null);
+        data = new dataInchas();
     }
 
     /**
@@ -27,21 +33,141 @@ public class frameInchas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txtNoPes = new javax.swing.JTextField();
+        txtNmChas = new javax.swing.JTextField();
+        txtHargaChas = new javax.swing.JTextField();
+        txtPax = new javax.swing.JTextField();
+        txtTotalChas = new javax.swing.JTextField();
+        txtIndex = new javax.swing.JTextField();
+        btnSimpanDataInchas = new javax.swing.JButton();
+        btnTampilDataInchas = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jLabel1.setText("No Pesan");
+
+        jLabel2.setText("Nama Chas");
+
+        jLabel3.setText("Harga Chas");
+
+        jLabel4.setText("Pax");
+
+        jLabel5.setText("Total Chas");
+
+        txtIndex.setText("0");
+
+        btnSimpanDataInchas.setText("Simpan Data Inchas");
+        btnSimpanDataInchas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSimpanDataInchasActionPerformed(evt);
+            }
+        });
+
+        btnTampilDataInchas.setText("Tampilkan Data");
+        btnTampilDataInchas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTampilDataInchasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSimpanDataInchas)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel5))
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtTotalChas, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtHargaChas, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNmChas, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPax, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNoPes, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnTampilDataInchas)
+                    .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(52, 52, 52))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel1, jLabel2, jLabel3, jLabel4, jLabel5});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtHargaChas, txtNmChas, txtNoPes, txtPax, txtTotalChas});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtNoPes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtNmChas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtHargaChas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtPax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(txtTotalChas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSimpanDataInchas)
+                    .addComponent(btnTampilDataInchas))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSimpanDataInchasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanDataInchasActionPerformed
+        // TODO add your handling code here:
+        data.insertNoPes(txtNoPes.getText());
+        data.insertNmChas(txtNmChas.getText());
+        data.insertHargaChas(Double.valueOf(txtHargaChas.getText()));
+        data.insertPax(Integer.valueOf(txtPax.getText()));
+        data.insertTotalChas(Double.valueOf(txtTotalChas.getText()));
+        
+        JOptionPane.showMessageDialog(this, "Data Inchas Berhasil Disimpan");
+    }//GEN-LAST:event_btnSimpanDataInchasActionPerformed
+
+    private void btnTampilDataInchasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampilDataInchasActionPerformed
+        // TODO add your handling code here:
+        int i = Integer.valueOf(txtIndex.getText());
+        
+        String isiDataInchas = "No Pesan : "+data.getRecordNoPes().get(i)+
+                               "\nNama Chas : "+data.getRecordNmChas().get(i)+
+                               "\nHarga Chas : "+data.getRecordHargaChas().get(i)+
+                               "\nPax : "+data.getRecordPax().get(i)+
+                               "\nTotal Chas : "+data.getRecordTotalChas().get(i);
+        
+        JOptionPane.showMessageDialog(this, isiDataInchas);
+                
+    }//GEN-LAST:event_btnTampilDataInchasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +205,18 @@ public class frameInchas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSimpanDataInchas;
+    private javax.swing.JButton btnTampilDataInchas;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField txtHargaChas;
+    private javax.swing.JTextField txtIndex;
+    private javax.swing.JTextField txtNmChas;
+    private javax.swing.JTextField txtNoPes;
+    private javax.swing.JTextField txtPax;
+    private javax.swing.JTextField txtTotalChas;
     // End of variables declaration//GEN-END:variables
 }

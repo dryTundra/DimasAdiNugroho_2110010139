@@ -5,13 +5,14 @@
 package forms;
 
 import dataset.dataCLogin;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Asus
  */
 public class frameCLogin extends javax.swing.JFrame {
-    dataCLogin dataLogin;
+    dataCLogin login;
 
     /**
      * Creates new form frameCLogin
@@ -19,7 +20,7 @@ public class frameCLogin extends javax.swing.JFrame {
     public frameCLogin() {
         initComponents();
         this.setLocationRelativeTo(null);
-        dataLogin = new dataCLogin();
+        login = new dataCLogin();
     }
 
     /**
@@ -106,6 +107,14 @@ public class frameCLogin extends javax.swing.JFrame {
 
     private void btnLoginKaryawanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginKaryawanActionPerformed
         // TODO add your handling code here:
+        login.insertNama(txtNama.getText());
+        login.insertPassword(txtPassword.getText());
+        
+        String isiNama = login.getRecordNama().get(0);
+        login.getRecordPassword().get(0);
+                  
+        JOptionPane.showMessageDialog(this, "Anda Masuk Sebagai "+isiNama);
+                
         new frameKaryawan().setVisible(true);
     }//GEN-LAST:event_btnLoginKaryawanActionPerformed
 

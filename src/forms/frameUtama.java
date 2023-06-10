@@ -28,8 +28,7 @@ public class frameUtama extends javax.swing.JFrame {
     private void initComponents() {
 
         btnLoginKaryawan = new javax.swing.JButton();
-        btnTamu = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,46 +39,34 @@ public class frameUtama extends javax.swing.JFrame {
             }
         });
 
-        btnTamu.setText("Tamu");
-        btnTamu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTamuActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("Karyawan");
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setText("Hotel Bonita");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(151, 151, 151)
+                .addGap(136, 136, 136)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(btnTamu)
-                    .addComponent(btnLoginKaryawan))
-                .addContainerGap(135, Short.MAX_VALUE))
+                    .addComponent(btnLoginKaryawan)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel1)))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(btnTamu)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
                 .addComponent(btnLoginKaryawan)
-                .addGap(50, 50, 50))
+                .addGap(66, 66, 66))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnTamuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTamuActionPerformed
-        // TODO add your handling code here:
-        new frameTamu().setVisible(true);
-    }//GEN-LAST:event_btnTamuActionPerformed
 
     private void btnLoginKaryawanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginKaryawanActionPerformed
         // TODO add your handling code here:
@@ -123,7 +110,6 @@ public class frameUtama extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLoginKaryawan;
-    private javax.swing.JButton btnTamu;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

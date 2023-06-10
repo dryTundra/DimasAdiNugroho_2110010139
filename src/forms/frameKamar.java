@@ -3,18 +3,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package forms;
+import dataset.dataKamar;
+import dataset.dataTamu;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Asus
  */
 public class frameKamar extends javax.swing.JFrame {
+    dataKamar dataKamar;
 
     /**
      * Creates new form frameKamar
      */
     public frameKamar() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        dataKamar = new dataKamar();
     }
 
     /**
@@ -35,11 +41,15 @@ public class frameKamar extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         txtKode = new javax.swing.JTextField();
         cmbTipe = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        cmbKapasitas = new javax.swing.JComboBox<>();
+        cmbFasilitas = new javax.swing.JComboBox<>();
         cmbStatus = new javax.swing.JComboBox<>();
         txtHargaWeekday = new javax.swing.JTextField();
         txtHargaWeekend = new javax.swing.JTextField();
+        btnSimpanDataKamar = new javax.swing.JButton();
+        txtIndex = new javax.swing.JTextField();
+        btnTampilDataKamar = new javax.swing.JButton();
+        btnKamarToPesan = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,10 +68,15 @@ public class frameKamar extends javax.swing.JFrame {
         jLabel7.setText("HargaWeekend");
 
         cmbTipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Luxury", "Executive" }));
+        cmbTipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbTipeActionPerformed(evt);
+            }
+        });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 Orang", "4 Orang" }));
+        cmbKapasitas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 Orang", "4 Orang" }));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbFasilitas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Private Beach", "View Laut" }));
 
         cmbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tersedia", "Penuh" }));
 
@@ -71,6 +86,19 @@ public class frameKamar extends javax.swing.JFrame {
             }
         });
 
+        btnSimpanDataKamar.setText("Simpan Data Kamar");
+        btnSimpanDataKamar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSimpanDataKamarActionPerformed(evt);
+            }
+        });
+
+        txtIndex.setText("0");
+
+        btnTampilDataKamar.setText("Tampilkan Data");
+
+        btnKamarToPesan.setText("Pesan Kamar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -79,13 +107,18 @@ public class frameKamar extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtHargaWeekend, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSimpanDataKamar)
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(cmbStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cmbFasilitas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -97,21 +130,22 @@ public class frameKamar extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtHargaWeekend, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cmbKapasitas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addGap(18, 18, 18)
                         .addComponent(txtHargaWeekday, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(293, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnTampilDataKamar)
+                    .addComponent(btnKamarToPesan))
+                .addGap(72, 72, 72))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel1, jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7});
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cmbStatus, cmbTipe, jComboBox2, jComboBox3, txtHargaWeekday, txtHargaWeekend, txtKode});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cmbFasilitas, cmbKapasitas, cmbStatus, cmbTipe, txtHargaWeekday, txtHargaWeekend, txtKode});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,7 +153,9 @@ public class frameKamar extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(txtKode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtKode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnKamarToPesan)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -127,11 +163,11 @@ public class frameKamar extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbKapasitas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbFasilitas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -143,8 +179,13 @@ public class frameKamar extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(txtHargaWeekend, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(82, Short.MAX_VALUE))
+                    .addComponent(txtHargaWeekend, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSimpanDataKamar)
+                    .addComponent(btnTampilDataKamar))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
@@ -153,6 +194,36 @@ public class frameKamar extends javax.swing.JFrame {
     private void txtHargaWeekendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHargaWeekendActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtHargaWeekendActionPerformed
+
+    private void cmbTipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTipeActionPerformed
+        // TODO add your handling code here:
+        String pilihTipe = (String) cmbTipe.getSelectedItem();
+        
+        if (pilihTipe.equals("Luxury")){
+            txtHargaWeekday.setText("1000000");
+            txtHargaWeekend.setText("2000000");
+            cmbKapasitas.setSelectedIndex(0);
+            cmbFasilitas.setSelectedIndex(1);
+        } else if (pilihTipe.equals("Executive")) {
+            txtHargaWeekday.setText("1500000");
+            txtHargaWeekend.setText("3000000");
+            cmbKapasitas.setSelectedIndex(1);
+            cmbFasilitas.setSelectedIndex(0);
+        } 
+    }//GEN-LAST:event_cmbTipeActionPerformed
+
+    private void btnSimpanDataKamarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanDataKamarActionPerformed
+        // TODO add your handling code here:
+        dataKamar.insertKode(Integer.valueOf(txtKode.getText()));
+        dataKamar.insertTipe(cmbTipe.getSelectedItem().toString());
+        dataKamar.insertKapasitas(cmbKapasitas.getSelectedItem().toString());
+        dataKamar.insertFasilitas(cmbFasilitas.getSelectedItem().toString());
+        dataKamar.insertStatus(cmbStatus.getSelectedItem().toString());
+        dataKamar.insertHargaWeekday(Double.valueOf(txtHargaWeekday.getText()));
+        dataKamar.insertHargaWeekend(Double.valueOf(txtHargaWeekend.getText()));
+        
+        JOptionPane.showMessageDialog(this, "Data Kamar Berhasil Disimpan");
+    }//GEN-LAST:event_btnSimpanDataKamarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,10 +261,13 @@ public class frameKamar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnKamarToPesan;
+    private javax.swing.JButton btnSimpanDataKamar;
+    private javax.swing.JButton btnTampilDataKamar;
+    private javax.swing.JComboBox<String> cmbFasilitas;
+    private javax.swing.JComboBox<String> cmbKapasitas;
     private javax.swing.JComboBox<String> cmbStatus;
     private javax.swing.JComboBox<String> cmbTipe;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -203,6 +277,7 @@ public class frameKamar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField txtHargaWeekday;
     private javax.swing.JTextField txtHargaWeekend;
+    private javax.swing.JTextField txtIndex;
     private javax.swing.JTextField txtKode;
     // End of variables declaration//GEN-END:variables
 }

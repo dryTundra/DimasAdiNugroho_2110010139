@@ -4,7 +4,9 @@
  */
 package dataset;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -14,7 +16,7 @@ public class dataKaryawan {
     private ArrayList<String> nama;
     private ArrayList<String> nik;
     private ArrayList<String> tmplahir;
-    //tgllahir
+    private ArrayList<String> tgllahir;
     private ArrayList<String> agama;
     private ArrayList<String> jnskel;
     private ArrayList<String> jabatan;
@@ -27,7 +29,7 @@ public class dataKaryawan {
         nama = new ArrayList<String>();
         nik = new ArrayList<String>();
         tmplahir = new ArrayList<String>();
-        //tgllahir
+        tgllahir = new ArrayList<String>();
         agama = new ArrayList<String>();
         jnskel = new ArrayList<String>();
         jabatan = new ArrayList<String>();
@@ -67,7 +69,13 @@ public class dataKaryawan {
     
     //
     
-    //tgllahir
+    public void insertTglLahir(String isi){
+        this.tgllahir.add(isi);
+    }
+    
+    public ArrayList <String> getRecordTglLahir(){
+        return this.tgllahir;
+    }
     
     //
     

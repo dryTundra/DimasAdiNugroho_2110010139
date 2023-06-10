@@ -12,14 +12,14 @@ import java.util.ArrayList;
  */
 public class dataLunas {
     private ArrayList<String> nolunas;
-    //tgl
+    private ArrayList<String> tgl;
     private ArrayList<Double> total;
     private ArrayList<Double> ubay;
     private ArrayList<Double> ukem;
     
     public dataLunas(){
         nolunas = new ArrayList<String>();
-        //tgl
+        tgl = new ArrayList<String>();
         total = new ArrayList<Double>();
         ubay = new ArrayList<Double>();
         ukem = new ArrayList<Double>();
@@ -35,7 +35,13 @@ public class dataLunas {
     
     //
     
-    //tgl
+    public void insertTgl(String isi){
+        this.tgl.add(isi);
+    }
+    
+    public ArrayList <String> getRecordTgl(){
+        return this.tgl;
+    }
     
     //
     
