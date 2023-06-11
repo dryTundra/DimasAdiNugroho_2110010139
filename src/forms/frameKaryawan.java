@@ -4,7 +4,6 @@
  */
 package forms;
 import dataset.dataKaryawan;
-import java.util.Date;
 import javax.swing.JOptionPane;
 
 
@@ -282,7 +281,7 @@ public class frameKaryawan extends javax.swing.JFrame {
         txtNIK.setText("");
         txtNama.setText("");
         txtTmpLahir.setText("");
-        //tglLahir
+        txtTglLahir.setText("");
         txtAgama.setText("");
         cmbJnsKel.setSelectedIndex(0);
         cmbJabatan.setSelectedIndex(0);
@@ -299,7 +298,7 @@ public class frameKaryawan extends javax.swing.JFrame {
         String isiDataKaryawan = "NIK : "+karyawan.getRecordNIK().get(i)+
                               "\nNama : "+karyawan.getRecordNama().get(i)+
                               "\nTempat Lahir : "+karyawan.getRecordTmpLahir().get(i)+
-                              //tglLahir
+                              "\nTanggal Lahir : "+karyawan.getRecordTglLahir().get(i)+
                               "\nAgama : "+karyawan.getRecordAgama().get(i)+
                               "\nJenis Kelamin : "+karyawan.getRecordJnsKel().get(i)+
                               "\nJabatan : "+karyawan.getRecordJabatan().get(i)+

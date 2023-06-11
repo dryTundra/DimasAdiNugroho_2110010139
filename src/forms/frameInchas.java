@@ -13,7 +13,7 @@ import dataset.dataInchas;
 import javax.swing.JOptionPane;
 
 public class frameInchas extends javax.swing.JFrame {
-    dataInchas data;
+    dataInchas inchas;
 
     /**
      * Creates new form frameInchas
@@ -21,7 +21,7 @@ public class frameInchas extends javax.swing.JFrame {
     public frameInchas() {
         initComponents();
         this.setLocationRelativeTo(null);
-        data = new dataInchas();
+        inchas = new dataInchas();
     }
 
     /**
@@ -146,24 +146,30 @@ public class frameInchas extends javax.swing.JFrame {
 
     private void btnSimpanDataInchasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanDataInchasActionPerformed
         // TODO add your handling code here:
-        data.insertNoPes(txtNoPes.getText());
-        data.insertNmChas(txtNmChas.getText());
-        data.insertHargaChas(Double.valueOf(txtHargaChas.getText()));
-        data.insertPax(Integer.valueOf(txtPax.getText()));
-        data.insertTotalChas(Double.valueOf(txtTotalChas.getText()));
+        inchas.insertNoPes(txtNoPes.getText());
+        inchas.insertNmChas(txtNmChas.getText());
+        inchas.insertHargaChas(Double.valueOf(txtHargaChas.getText()));
+        inchas.insertPax(Integer.valueOf(txtPax.getText()));
+        inchas.insertTotalChas(Double.valueOf(txtTotalChas.getText()));
         
         JOptionPane.showMessageDialog(this, "Data Inchas Berhasil Disimpan");
+        
+        txtNoPes.setText("");
+        txtNmChas.setText("");
+        txtHargaChas.setText("");
+        txtPax.setText("");
+        txtTotalChas.setText("");
     }//GEN-LAST:event_btnSimpanDataInchasActionPerformed
 
     private void btnTampilDataInchasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampilDataInchasActionPerformed
         // TODO add your handling code here:
         int i = Integer.valueOf(txtIndex.getText());
         
-        String isiDataInchas = "No Pesan : "+data.getRecordNoPes().get(i)+
-                               "\nNama Chas : "+data.getRecordNmChas().get(i)+
-                               "\nHarga Chas : "+data.getRecordHargaChas().get(i)+
-                               "\nPax : "+data.getRecordPax().get(i)+
-                               "\nTotal Chas : "+data.getRecordTotalChas().get(i);
+        String isiDataInchas = "No Pesan : "+inchas.getRecordNoPes().get(i)+
+                               "\nNama Chas : "+inchas.getRecordNmChas().get(i)+
+                               "\nHarga Chas : "+inchas.getRecordHargaChas().get(i)+
+                               "\nPax : "+inchas.getRecordPax().get(i)+
+                               "\nTotal Chas : "+inchas.getRecordTotalChas().get(i);
         
         JOptionPane.showMessageDialog(this, isiDataInchas);
                 

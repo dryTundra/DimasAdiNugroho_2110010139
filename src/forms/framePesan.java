@@ -249,6 +249,16 @@ public class framePesan extends javax.swing.JFrame {
         pesan.insertSisaBayar(Double.valueOf(txtSisaBayar.getText()));
         
         JOptionPane.showMessageDialog(this, "Data Pesan Berhasil Disimpan");
+        
+        txtNoPes.setText("");
+        txtTgl.setText("");
+        txtTglIn.setText("");
+        txtTglOut.setText("");
+        txtLama.setText("");
+        txtNmChas.setText("");
+        txtToBay.setText("");
+        txtDP.setText("");
+        txtSisaBayar.setText("");
     }//GEN-LAST:event_btnSimpanDataPesanActionPerformed
 
     private void btnTampilDataPesanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampilDataPesanActionPerformed

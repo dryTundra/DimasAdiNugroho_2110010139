@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package forms;
-import dataset.dataKaryawan;
 import dataset.dataLunas;
 import javax.swing.JOptionPane;
 
@@ -12,7 +11,7 @@ import javax.swing.JOptionPane;
  * @author Asus
  */
 public class frameLunas extends javax.swing.JFrame {
-    dataLunas dataLunas;
+    dataLunas lunas;
 
     /**
      * Creates new form frameLunas
@@ -20,7 +19,7 @@ public class frameLunas extends javax.swing.JFrame {
     public frameLunas() {
         initComponents();
         this.setLocationRelativeTo(null);
-        dataLunas = new dataLunas();
+        lunas = new dataLunas();
     }
 
     /**
@@ -151,11 +150,11 @@ public class frameLunas extends javax.swing.JFrame {
 
     private void btnSimpanDataLunasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanDataLunasActionPerformed
         // TODO add your handling code here:
-        dataLunas.insertNoLunas(txtNoLunas.getText());
-        dataLunas.insertTgl(txtTgl.getText());
-        dataLunas.insertTotal(Double.valueOf(txtTotal.getText()));
-        dataLunas.insertUBay(Double.valueOf(txtUbay.getText()));
-        dataLunas.insertUKem(Double.valueOf(txtUkem.getText()));
+        lunas.insertNoLunas(txtNoLunas.getText());
+        lunas.insertTgl(txtTgl.getText());
+        lunas.insertTotal(Double.valueOf(txtTotal.getText()));
+        lunas.insertUBay(Double.valueOf(txtUbay.getText()));
+        lunas.insertUKem(Double.valueOf(txtUkem.getText()));
         
         JOptionPane.showMessageDialog(this, "Data Lunas Berhasil Disimpan");
     }//GEN-LAST:event_btnSimpanDataLunasActionPerformed
@@ -164,11 +163,11 @@ public class frameLunas extends javax.swing.JFrame {
         // TODO add your handling code here:
         int i = Integer.valueOf(txtIndex.getText());
         
-        String isiDataLunas = "No Lunas : "+dataLunas.getRecordNoLunas().get(i)+
-                              "\nTanggal : "+dataLunas.getRecordTgl().get(i)+
-                              "\nTotal : "+dataLunas.getRecordTotal().get(i)+
-                              "\nUang Bayar : "+dataLunas.getRecordUBay().get(i)+
-                              "\nUang Kembalian : "+dataLunas.getRecordUKem().get(i);
+        String isiDataLunas = "No Lunas : "+lunas.getRecordNoLunas().get(i)+
+                              "\nTanggal : "+lunas.getRecordTgl().get(i)+
+                              "\nTotal : "+lunas.getRecordTotal().get(i)+
+                              "\nUang Bayar : "+lunas.getRecordUBay().get(i)+
+                              "\nUang Kembalian : "+lunas.getRecordUKem().get(i);
         
         JOptionPane.showMessageDialog(this, isiDataLunas);
                 

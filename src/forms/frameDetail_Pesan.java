@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  * @author Asus
  */
 public class frameDetail_Pesan extends javax.swing.JFrame {
-    dataDetail_Pesan detailpesan;
+    dataDetail_Pesan detailPesan;
 
     /**
      * Creates new form frameDetail_Pesan
@@ -19,7 +19,7 @@ public class frameDetail_Pesan extends javax.swing.JFrame {
     public frameDetail_Pesan() {
         initComponents();
         this.setLocationRelativeTo(null);
-        detailpesan = new dataDetail_Pesan();
+        detailPesan = new dataDetail_Pesan();
     }
 
     /**
@@ -110,16 +110,18 @@ public class frameDetail_Pesan extends javax.swing.JFrame {
 
     private void btnSimpanDataDetail_PesanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanDataDetail_PesanActionPerformed
         // TODO add your handling code here:
-        detailpesan.insertNoPes(txtNoPes.getText());
+        detailPesan.insertNoPes(txtNoPes.getText());
         
         JOptionPane.showMessageDialog(this,"Data Detail Pesan Berhasil Disimpan");
+        
+        txtNoPes.setText("");
     }//GEN-LAST:event_btnSimpanDataDetail_PesanActionPerformed
 
     private void btnTampilDataDetail_PesanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampilDataDetail_PesanActionPerformed
         // TODO add your handling code here:
         int i = Integer.valueOf(txtIndex.getText());
         
-        String isiDataDetail_Pesan = "No Pesan : "+detailpesan.getRecordNoPes().get(i);
+        String isiDataDetail_Pesan = "No Pesan : "+detailPesan.getRecordNoPes().get(i);
         
         JOptionPane.showMessageDialog(this, isiDataDetail_Pesan);
     }//GEN-LAST:event_btnTampilDataDetail_PesanActionPerformed

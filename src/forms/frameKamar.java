@@ -232,6 +232,15 @@ public class frameKamar extends javax.swing.JFrame {
         kamar.insertHargaWeekend(Double.valueOf(txtHargaWeekend.getText()));
         
         JOptionPane.showMessageDialog(this, "Data Kamar Berhasil Disimpan");
+        
+        txtKode.setText("");
+        cmbTipe.setSelectedIndex(0);
+        cmbKapasitas.setSelectedIndex(0);
+        cmbFasilitas.setSelectedIndex(0);
+        cmbTipe.setSelectedIndex(0);
+        cmbStatus.setSelectedIndex(0);
+        txtHargaWeekday.setText("");
+        txtHargaWeekend.setText("");
     }//GEN-LAST:event_btnSimpanDataKamarActionPerformed
 
     private void btnKamarToPesanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKamarToPesanActionPerformed

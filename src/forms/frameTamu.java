@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  * @author Asus
  */
 public class frameTamu extends javax.swing.JFrame {
-    dataTamu dataTamu;
+    dataTamu tamu;
 
     /**
      * Creates new form frameTamu
@@ -19,7 +19,7 @@ public class frameTamu extends javax.swing.JFrame {
     public frameTamu() {
         initComponents();
         this.setLocationRelativeTo(null);
-        dataTamu = new dataTamu();
+        tamu = new dataTamu();
     }
 
     /**
@@ -166,12 +166,17 @@ public class frameTamu extends javax.swing.JFrame {
 
     private void btnSimpanDataTamuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanDataTamuActionPerformed
         // TODO add your handling code here:
-        dataTamu.insertNoKTP(txtNoKTP.getText());
-        dataTamu.insertNmTamu(txtNmTamu.getText());
-        dataTamu.insertAlamat(txtAlamat.getText());
-        dataTamu.insertNoTelp(txtNoTelp.getText());
+        tamu.insertNoKTP(txtNoKTP.getText());
+        tamu.insertNmTamu(txtNmTamu.getText());
+        tamu.insertAlamat(txtAlamat.getText());
+        tamu.insertNoTelp(txtNoTelp.getText());
         
         JOptionPane.showMessageDialog(this, "Data Tamu Berhasil Disimpan");
+        
+        txtNoKTP.setText("");
+        txtNmTamu.setText("");
+        txtAlamat.setText("");
+        txtNoTelp.setText("");
     }//GEN-LAST:event_btnSimpanDataTamuActionPerformed
 
     private void btnTampilDataTamuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampilDataTamuActionPerformed
@@ -179,10 +184,10 @@ public class frameTamu extends javax.swing.JFrame {
         
         int i = Integer.valueOf(txtIndex.getText());
         
-        String isiDataTamu = "No KTP : "+dataTamu.getRecordNoKTP().get(i)+
-                             "\nNama Tamu : "+dataTamu.getRecordNmTamu().get(i)+
-                             "\nAlamat : "+dataTamu.getRecordAlamat().get(i)+
-                             "\nNo Telpon : "+dataTamu.getRecordNoTelp().get(i);
+        String isiDataTamu = "No KTP : "+tamu.getRecordNoKTP().get(i)+
+                             "\nNama Tamu : "+tamu.getRecordNmTamu().get(i)+
+                             "\nAlamat : "+tamu.getRecordAlamat().get(i)+
+                             "\nNo Telpon : "+tamu.getRecordNoTelp().get(i);
         
         JOptionPane.showMessageDialog(this, isiDataTamu);
     }//GEN-LAST:event_btnTampilDataTamuActionPerformed

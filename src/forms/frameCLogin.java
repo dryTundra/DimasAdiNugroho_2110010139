@@ -164,6 +164,9 @@ public class frameCLogin extends javax.swing.JFrame {
         login.insertPassword(txtPassword.getText());
         
         JOptionPane.showMessageDialog(this, "Data Login Berhasil Disimpan");
+        
+        txtNama.setText("");
+        txtPassword.setText("");
     }//GEN-LAST:event_btnSimpanDataLoginActionPerformed
 
     private void btnTampilDataLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampilDataLoginActionPerformed

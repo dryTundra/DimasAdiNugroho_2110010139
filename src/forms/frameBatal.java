@@ -100,6 +100,8 @@ public class frameBatal extends javax.swing.JFrame {
         batal.insertNoBatal(txtNoBatal.getText());
         
         JOptionPane.showMessageDialog(this, "Data Batal Berhasil Disimpan");
+        
+        txtNoBatal.setText("");
     }//GEN-LAST:event_btnSimpanDataBatalActionPerformed
 
     private void btnTampilDataBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampilDataBatalActionPerformed
