@@ -3,19 +3,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package forms;
+import dataset.dataBatal;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Asus
  */
 public class frameBatal extends javax.swing.JFrame {
-
+    dataBatal batal;
     /**
      * Creates new form frameBatal
      */
     public frameBatal() {
         initComponents();
         this.setLocationRelativeTo(null);
+        batal = new dataBatal();
     }
 
     /**
@@ -28,28 +31,50 @@ public class frameBatal extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        txtBatal = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txtNoBatal = new javax.swing.JTextField();
+        btnSimpanDataBatal = new javax.swing.JButton();
+        txtIndex = new javax.swing.JTextField();
+        btnTampilDataBatal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("No Batal");
 
-        jButton1.setText("Simpan Data Batal");
+        btnSimpanDataBatal.setText("Simpan Data Batal");
+        btnSimpanDataBatal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSimpanDataBatalActionPerformed(evt);
+            }
+        });
+
+        txtIndex.setText("0");
+
+        btnTampilDataBatal.setText("Tampilkan Data");
+        btnTampilDataBatal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTampilDataBatalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
+                    .addComponent(btnSimpanDataBatal)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(179, Short.MAX_VALUE))
+                        .addComponent(txtNoBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnTampilDataBatal)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)))
+                .addGap(56, 56, 56))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -57,14 +82,34 @@ public class frameBatal extends javax.swing.JFrame {
                 .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtBatal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                    .addComponent(txtNoBatal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSimpanDataBatal)
+                    .addComponent(btnTampilDataBatal))
                 .addGap(33, 33, 33))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSimpanDataBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanDataBatalActionPerformed
+        // TODO add your handling code here:
+        batal.insertNoBatal(txtNoBatal.getText());
+        
+        JOptionPane.showMessageDialog(this, "Data Batal Berhasil Disimpan");
+    }//GEN-LAST:event_btnSimpanDataBatalActionPerformed
+
+    private void btnTampilDataBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampilDataBatalActionPerformed
+        // TODO add your handling code here:
+        int i = Integer.valueOf(txtIndex.getText());
+        
+        String isiDataBatal = "No Batal : "+batal.getRecordNoBatal().get(i);
+        
+        JOptionPane.showMessageDialog(this, isiDataBatal);
+    }//GEN-LAST:event_btnTampilDataBatalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,8 +147,10 @@ public class frameBatal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnSimpanDataBatal;
+    private javax.swing.JButton btnTampilDataBatal;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField txtBatal;
+    private javax.swing.JTextField txtIndex;
+    private javax.swing.JTextField txtNoBatal;
     // End of variables declaration//GEN-END:variables
 }

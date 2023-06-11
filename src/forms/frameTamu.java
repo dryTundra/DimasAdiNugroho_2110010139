@@ -42,6 +42,8 @@ public class frameTamu extends javax.swing.JFrame {
         btnSimpanDataTamu = new javax.swing.JButton();
         txtIndex = new javax.swing.JTextField();
         btnTampilDataTamu = new javax.swing.JButton();
+        btnTamuToLunas = new javax.swing.JButton();
+        btnTamuToBatal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -69,6 +71,20 @@ public class frameTamu extends javax.swing.JFrame {
             }
         });
 
+        btnTamuToLunas.setText("Pelunasan");
+        btnTamuToLunas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTamuToLunasActionPerformed(evt);
+            }
+        });
+
+        btnTamuToBatal.setText("Batal");
+        btnTamuToBatal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTamuToBatalActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -82,11 +98,15 @@ public class frameTamu extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtNoKTP, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNoTelp, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNmTamu, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNoKTP, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtNmTamu, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnTamuToLunas)
+                    .addComponent(btnTamuToBatal))
+                .addGap(28, 28, 28))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
@@ -104,14 +124,20 @@ public class frameTamu extends javax.swing.JFrame {
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAlamat, txtNmTamu, txtNoKTP, txtNoTelp});
 
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnTamuToBatal, btnTamuToLunas});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtNoKTP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(114, 114, 114))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtNoKTP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnTamuToLunas))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnTamuToBatal)
+                        .addGap(78, 78, 78))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
@@ -161,6 +187,16 @@ public class frameTamu extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, isiDataTamu);
     }//GEN-LAST:event_btnTampilDataTamuActionPerformed
 
+    private void btnTamuToLunasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTamuToLunasActionPerformed
+        // TODO add your handling code here:
+        new frameLunas().setVisible(true);
+    }//GEN-LAST:event_btnTamuToLunasActionPerformed
+
+    private void btnTamuToBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTamuToBatalActionPerformed
+        // TODO add your handling code here:
+        new frameBatal().setVisible(true);
+    }//GEN-LAST:event_btnTamuToBatalActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -199,6 +235,8 @@ public class frameTamu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSimpanDataTamu;
     private javax.swing.JButton btnTampilDataTamu;
+    private javax.swing.JButton btnTamuToBatal;
+    private javax.swing.JButton btnTamuToLunas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

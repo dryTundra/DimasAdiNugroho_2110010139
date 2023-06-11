@@ -242,11 +242,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Tampilkan Data"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTampilDataKamarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnKamarToPesan">
       <Properties>
         <Property name="text" type="java.lang.String" value="Pesan Kamar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnKamarToPesanActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

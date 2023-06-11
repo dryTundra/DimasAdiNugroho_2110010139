@@ -4,7 +4,6 @@
  */
 package forms;
 import dataset.dataKamar;
-import dataset.dataTamu;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,7 +11,7 @@ import javax.swing.JOptionPane;
  * @author Asus
  */
 public class frameKamar extends javax.swing.JFrame {
-    dataKamar dataKamar;
+    dataKamar kamar;
 
     /**
      * Creates new form frameKamar
@@ -20,7 +19,7 @@ public class frameKamar extends javax.swing.JFrame {
     public frameKamar() {
         initComponents();
         this.setLocationRelativeTo(null);
-        dataKamar = new dataKamar();
+        kamar = new dataKamar();
     }
 
     /**
@@ -96,8 +95,18 @@ public class frameKamar extends javax.swing.JFrame {
         txtIndex.setText("0");
 
         btnTampilDataKamar.setText("Tampilkan Data");
+        btnTampilDataKamar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTampilDataKamarActionPerformed(evt);
+            }
+        });
 
         btnKamarToPesan.setText("Pesan Kamar");
+        btnKamarToPesan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKamarToPesanActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -214,16 +223,36 @@ public class frameKamar extends javax.swing.JFrame {
 
     private void btnSimpanDataKamarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanDataKamarActionPerformed
         // TODO add your handling code here:
-        dataKamar.insertKode(Integer.valueOf(txtKode.getText()));
-        dataKamar.insertTipe(cmbTipe.getSelectedItem().toString());
-        dataKamar.insertKapasitas(cmbKapasitas.getSelectedItem().toString());
-        dataKamar.insertFasilitas(cmbFasilitas.getSelectedItem().toString());
-        dataKamar.insertStatus(cmbStatus.getSelectedItem().toString());
-        dataKamar.insertHargaWeekday(Double.valueOf(txtHargaWeekday.getText()));
-        dataKamar.insertHargaWeekend(Double.valueOf(txtHargaWeekend.getText()));
+        kamar.insertKode(Integer.valueOf(txtKode.getText()));
+        kamar.insertTipe(cmbTipe.getSelectedItem().toString());
+        kamar.insertKapasitas(cmbKapasitas.getSelectedItem().toString());
+        kamar.insertFasilitas(cmbFasilitas.getSelectedItem().toString());
+        kamar.insertStatus(cmbStatus.getSelectedItem().toString());
+        kamar.insertHargaWeekday(Double.valueOf(txtHargaWeekday.getText()));
+        kamar.insertHargaWeekend(Double.valueOf(txtHargaWeekend.getText()));
         
         JOptionPane.showMessageDialog(this, "Data Kamar Berhasil Disimpan");
     }//GEN-LAST:event_btnSimpanDataKamarActionPerformed
+
+    private void btnKamarToPesanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKamarToPesanActionPerformed
+        // TODO add your handling code here:
+        new framePesan().setVisible(true);
+    }//GEN-LAST:event_btnKamarToPesanActionPerformed
+
+    private void btnTampilDataKamarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampilDataKamarActionPerformed
+        // TODO add your handling code here:
+        int i = Integer.valueOf(txtIndex.getText());
+        
+        String isiDataKamar = "Kode : "+kamar.getRecordKode().get(i)+
+                              "\nTipe : "+kamar.getRecordTipe().get(i)+
+                              "\nKapasitas : "+kamar.getRecordKapasitas().get(i)+
+                              "\nFasilitas : "+kamar.getRecordFasilitas().get(i)+
+                              "\nStatus : "+kamar.getRecordStatus().get(i)+
+                              "\nHarga Weekday : "+kamar.getRecordHargaWeekday().get(i)+
+                              "\nHarga Weekend : "+kamar.getRecordHargaWeekend().get(i);
+        
+        JOptionPane.showMessageDialog(this, isiDataKamar);
+    }//GEN-LAST:event_btnTampilDataKamarActionPerformed
 
     /**
      * @param args the command line arguments

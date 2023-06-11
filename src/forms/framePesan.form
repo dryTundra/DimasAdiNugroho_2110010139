@@ -49,26 +49,37 @@
                                   <Component id="jLabel1" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtNoPes" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <Component id="txtTgl" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <Component id="txtTglIn" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <Component id="txtLama" linkSize="2" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <Component id="txtNmChas" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <Component id="txtToBay" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <Component id="txtDP" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="txtSisaBayar" linkSize="2" min="-2" pref="103" max="-2" attributes="0"/>
-                                      <EmptySpace pref="80" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="btnTampilDataPesan" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtIndex" min="-2" pref="77" max="-2" attributes="0"/>
+                                          <Component id="txtTglIn" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
+                                          <Component id="txtLama" linkSize="2" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                                          <Component id="txtNmChas" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
+                                          <Component id="txtToBay" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
+                                          <Component id="txtDP" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtNoPes" linkSize="2" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                                          <Component id="txtTgl" linkSize="2" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                                          <Component id="txtSisaBayar" linkSize="2" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="31" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="btnTampilDataPesan" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtIndex" min="-2" pref="77" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="btnPesanToInchas" linkSize="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnPesanToDetail_Pesan" linkSize="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -81,11 +92,13 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtNoPes" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnPesanToDetail_Pesan" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtTgl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnPesanToInchas" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -123,7 +136,7 @@
                   <Component id="txtSisaBayar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtIndex" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="29" max="32767" attributes="0"/>
+              <EmptySpace pref="27" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnSimpanDataPesan" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnTampilDataPesan" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -207,6 +220,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtIndex">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnSimpanDataPesan">
       <Properties>
@@ -222,6 +238,22 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTampilDataPesanActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnPesanToDetail_Pesan">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Detail Pesan"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPesanToDetail_PesanActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnPesanToInchas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="InChas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPesanToInchasActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

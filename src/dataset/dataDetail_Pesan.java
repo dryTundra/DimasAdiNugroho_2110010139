@@ -14,7 +14,7 @@ public class dataDetail_Pesan {
     private ArrayList<String> nopes;
     
     public dataDetail_Pesan(){
-        nopes = new ArrayList<String>();
+        nopes = new ArrayList<String>();        
     };
     
     public void insertNoPes(String isi){

@@ -37,6 +37,9 @@ public class frameCLogin extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtNama = new javax.swing.JTextField();
         txtPassword = new javax.swing.JTextField();
+        btnSimpanDataLogin = new javax.swing.JButton();
+        txtIndex = new javax.swing.JTextField();
+        btnTampilDataLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -63,33 +66,56 @@ public class frameCLogin extends javax.swing.JFrame {
             }
         });
 
+        btnSimpanDataLogin.setText("Simpan Data Login");
+        btnSimpanDataLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSimpanDataLoginActionPerformed(evt);
+            }
+        });
+
+        txtIndex.setText("0");
+
+        btnTampilDataLogin.setText("Tampilkan Data");
+        btnTampilDataLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTampilDataLoginActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(90, 90, 90)
+                .addGap(97, 97, 97)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnLoginKaryawan)
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(btnLoginKaryawan))
+                        .addGap(32, 32, 32)
+                        .addComponent(btnSimpanDataLogin)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                        .addComponent(btnTampilDataLogin))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(142, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(45, 45, 45))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtNama, txtPassword});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(62, 62, 62)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -97,9 +123,15 @@ public class frameCLogin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
                 .addComponent(btnLoginKaryawan)
-                .addGap(54, 54, 54))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSimpanDataLogin)
+                    .addComponent(btnTampilDataLogin))
+                .addGap(53, 53, 53))
         );
 
         pack();
@@ -125,6 +157,24 @@ public class frameCLogin extends javax.swing.JFrame {
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPasswordActionPerformed
+
+    private void btnSimpanDataLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanDataLoginActionPerformed
+        // TODO add your handling code here:
+        login.insertNama(txtNama.getText());
+        login.insertPassword(txtPassword.getText());
+        
+        JOptionPane.showMessageDialog(this, "Data Login Berhasil Disimpan");
+    }//GEN-LAST:event_btnSimpanDataLoginActionPerformed
+
+    private void btnTampilDataLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampilDataLoginActionPerformed
+        // TODO add your handling code here:
+        int i = Integer.valueOf(txtIndex.getText());
+        
+        String isiDataLogin = "Nama : "+login.getRecordNama().get(i)+
+                              "\nPassword : "+login.getRecordPassword().get(i);
+        
+        JOptionPane.showMessageDialog(this, isiDataLogin);
+    }//GEN-LAST:event_btnTampilDataLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,8 +213,11 @@ public class frameCLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLoginKaryawan;
+    private javax.swing.JButton btnSimpanDataLogin;
+    private javax.swing.JButton btnTampilDataLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField txtIndex;
     private javax.swing.JTextField txtNama;
     private javax.swing.JTextField txtPassword;
     // End of variables declaration//GEN-END:variables
