@@ -20,6 +20,8 @@ public class framePesan extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         pesan = new dataPesan();
+        
+        txtSisaBayar.setEditable(false);
     }
 
     /**
@@ -45,7 +47,6 @@ public class framePesan extends javax.swing.JFrame {
         txtTglIn = new javax.swing.JTextField();
         txtTglOut = new javax.swing.JTextField();
         txtLama = new javax.swing.JTextField();
-        txtNmChas = new javax.swing.JTextField();
         txtToBay = new javax.swing.JTextField();
         txtDP = new javax.swing.JTextField();
         txtSisaBayar = new javax.swing.JTextField();
@@ -54,8 +55,11 @@ public class framePesan extends javax.swing.JFrame {
         btnTampilDataPesan = new javax.swing.JButton();
         btnPesanToDetail_Pesan = new javax.swing.JButton();
         btnPesanToInchas = new javax.swing.JButton();
+        btnHitungSisaBayar = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        cmbNmChas = new javax.swing.JComboBox<>();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("No Pesan");
 
@@ -123,18 +127,33 @@ public class framePesan extends javax.swing.JFrame {
             }
         });
 
+        btnHitungSisaBayar.setText("Hitung");
+        btnHitungSisaBayar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHitungSisaBayarActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel10.setText("DATA PESAN");
+
+        cmbNmChas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tambah Kasur", "Tambah Bantal", "TambahHanduk" }));
+        cmbNmChas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbNmChasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnSimpanDataPesan)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnSimpanDataPesan)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addGap(18, 18, 18)
@@ -150,40 +169,51 @@ public class framePesan extends javax.swing.JFrame {
                                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtTglIn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtLama, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtNmChas, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtToBay, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtDP, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtNoPes, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtTgl, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtSisaBayar, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                                            .addComponent(txtNoPes, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                                            .addComponent(txtTgl, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                                            .addComponent(txtSisaBayar, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                                            .addComponent(txtTglIn, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                                            .addComponent(txtLama, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                                            .addComponent(txtToBay, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                                            .addComponent(txtDP, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE))
+                                        .addGap(15, 15, 15)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(btnTampilDataPesan)
-                                                .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(btnPesanToInchas)
-                                            .addComponent(btnPesanToDetail_Pesan))))))
-                        .addGap(45, 45, 45))))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnHitungSisaBayar))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(38, 38, 38)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(btnTampilDataPesan)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addGap(19, 19, 19)
+                                                            .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(btnPesanToDetail_Pesan)
+                                                        .addComponent(btnPesanToInchas))))))
+                                    .addComponent(cmbNmChas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel10)))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel1, jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8, jLabel9});
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtDP, txtLama, txtNmChas, txtNoPes, txtSisaBayar, txtTgl, txtTglIn, txtTglOut, txtToBay});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cmbNmChas, txtDP, txtLama, txtNoPes, txtSisaBayar, txtTgl, txtTglIn, txtTglOut, txtToBay});
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnPesanToDetail_Pesan, btnPesanToInchas});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addComponent(jLabel10)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtNoPes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -208,7 +238,7 @@ public class framePesan extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(txtNmChas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbNmChas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
@@ -221,12 +251,14 @@ public class framePesan extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(txtSisaBayar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                    .addComponent(btnHitungSisaBayar))
+                .addGap(18, 18, 18)
+                .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSimpanDataPesan)
-                    .addComponent(btnTampilDataPesan))
-                .addGap(30, 30, 30))
+                    .addComponent(btnTampilDataPesan)
+                    .addComponent(btnSimpanDataPesan))
+                .addGap(17, 17, 17))
         );
 
         pack();
@@ -243,7 +275,7 @@ public class framePesan extends javax.swing.JFrame {
         pesan.insertTglIn(txtTglIn.getText());
         pesan.insertTglOut(txtTglOut.getText());
         pesan.insertLama(Integer.valueOf(txtLama.getText()));
-        pesan.insertNmChas(txtNmChas.getText());
+        pesan.insertNmChas(cmbNmChas.getSelectedItem().toString());
         pesan.insertToBay(Double.valueOf(txtToBay.getText()));
         pesan.insertDP(Double.valueOf(txtDP.getText()));
         pesan.insertSisaBayar(Double.valueOf(txtSisaBayar.getText()));
@@ -255,7 +287,7 @@ public class framePesan extends javax.swing.JFrame {
         txtTglIn.setText("");
         txtTglOut.setText("");
         txtLama.setText("");
-        txtNmChas.setText("");
+        cmbNmChas.setSelectedIndex(0);
         txtToBay.setText("");
         txtDP.setText("");
         txtSisaBayar.setText("");
@@ -293,8 +325,24 @@ public class framePesan extends javax.swing.JFrame {
 
     private void btnPesanToInchasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesanToInchasActionPerformed
         // TODO add your handling code here:
-        new frameDetail_Pesan().setVisible(true);
+        new frameInchas().setVisible(true);
     }//GEN-LAST:event_btnPesanToInchasActionPerformed
+
+    private void btnHitungSisaBayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungSisaBayarActionPerformed
+        // TODO add your handling code here:
+        double tobay, dp, sisa;
+        
+        tobay = Double.parseDouble(txtToBay.getText());
+        dp = Double.parseDouble(txtDP.getText());
+        
+        sisa = tobay-dp;
+        
+        txtSisaBayar.setText(String.valueOf(sisa));
+    }//GEN-LAST:event_btnHitungSisaBayarActionPerformed
+
+    private void cmbNmChasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbNmChasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbNmChasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -332,11 +380,14 @@ public class framePesan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnHitungSisaBayar;
     private javax.swing.JButton btnPesanToDetail_Pesan;
     private javax.swing.JButton btnPesanToInchas;
     private javax.swing.JButton btnSimpanDataPesan;
     private javax.swing.JButton btnTampilDataPesan;
+    private javax.swing.JComboBox<String> cmbNmChas;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -348,7 +399,6 @@ public class framePesan extends javax.swing.JFrame {
     private javax.swing.JTextField txtDP;
     private javax.swing.JTextField txtIndex;
     private javax.swing.JTextField txtLama;
-    private javax.swing.JTextField txtNmChas;
     private javax.swing.JTextField txtNoPes;
     private javax.swing.JTextField txtSisaBayar;
     private javax.swing.JTextField txtTgl;

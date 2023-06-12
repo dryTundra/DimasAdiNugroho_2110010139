@@ -20,6 +20,9 @@ public class frameKamar extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         kamar = new dataKamar();
+        
+        txtHargaWeekday.setEditable(false);
+        txtHargaWeekend.setEditable(false);
     }
 
     /**
@@ -49,8 +52,9 @@ public class frameKamar extends javax.swing.JFrame {
         txtIndex = new javax.swing.JTextField();
         btnTampilDataKamar = new javax.swing.JButton();
         btnKamarToPesan = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Kode");
 
@@ -108,6 +112,9 @@ public class frameKamar extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel8.setText("DATA KAMAR");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -150,6 +157,10 @@ public class frameKamar extends javax.swing.JFrame {
                     .addComponent(btnTampilDataKamar)
                     .addComponent(btnKamarToPesan))
                 .addGap(72, 72, 72))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel1, jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7});
@@ -158,8 +169,10 @@ public class frameKamar extends javax.swing.JFrame {
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -194,7 +207,7 @@ public class frameKamar extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSimpanDataKamar)
                     .addComponent(btnTampilDataKamar))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addGap(18, 18, 18))
         );
 
         pack();
@@ -313,6 +326,7 @@ public class frameKamar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField txtHargaWeekday;
     private javax.swing.JTextField txtHargaWeekend;
     private javax.swing.JTextField txtIndex;
