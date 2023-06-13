@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author Asus
  */
 public class dataKamar {
-    private ArrayList <Integer> kode;
+    private ArrayList <Integer> kdKamar;
     private ArrayList <String> tipe;
     private ArrayList <String> kapasitas;
     private ArrayList <String> fasilitas;
@@ -21,7 +21,7 @@ public class dataKamar {
 
     
     public dataKamar(){
-      kode = new ArrayList<Integer>();
+      kdKamar = new ArrayList<Integer>();
       tipe = new ArrayList<String>();
       kapasitas = new ArrayList<String>();
       fasilitas = new ArrayList<String>();
@@ -31,11 +31,11 @@ public class dataKamar {
     };
     
     public void insertKode(int isi){
-        this.kode.add(isi);
+        this.kdKamar.add(isi);
     }
     
     public ArrayList <Integer> getRecordKode(){
-        return this.kode;
+        return this.kdKamar;
     }
     
     //

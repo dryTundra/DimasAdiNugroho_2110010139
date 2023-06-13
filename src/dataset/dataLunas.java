@@ -49,11 +49,11 @@ public class dataLunas {
     
     //
     
-    public void insertNik(String isi){
+    public void insertNIK(String isi){
         this.nik.add(isi);
     }
     
-    public ArrayList <String> getRecordNik(){
+    public ArrayList <String> getRecordNIK(){
         return this.nik;
     }
     

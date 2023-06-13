@@ -12,6 +12,8 @@ import java.util.ArrayList;
  */
 public class dataPesan {
     private ArrayList<String> nopesan;
+    private ArrayList<String> nik;
+    private ArrayList<String> noKTP;
     private ArrayList<String> tgl;
     private ArrayList<String> tglin;
     private ArrayList<String> tglout;
@@ -20,9 +22,13 @@ public class dataPesan {
     private ArrayList<Double> tobay;
     private ArrayList<Double> dp;
     private ArrayList<Double> sisabayar;
+    private ArrayList<String> statusbayar;
+    private ArrayList<String> ketpesan;
     
     public dataPesan(){
         nopesan = new ArrayList<String>();
+        nik = new ArrayList<String>();
+        noKTP = new ArrayList<String>();
         tgl = new ArrayList<String>();
         tglin = new ArrayList<String>();
         tglout = new ArrayList<String>();
@@ -31,6 +37,8 @@ public class dataPesan {
         tobay = new ArrayList<Double>();
         dp = new ArrayList<Double>();
         sisabayar = new ArrayList<Double>();
+        statusbayar = new ArrayList<String>();
+        ketpesan = new ArrayList<String>();
     };
     
     public void insertNoPesan(String isi){
@@ -39,6 +47,26 @@ public class dataPesan {
     
     public ArrayList <String> getRecordNoPesan(){
         return this.nopesan;
+    }
+    
+    //
+    
+    public void insertNik(String isi){
+        this.nik.add(isi);
+    }
+    
+    public ArrayList <String> getRecordNik(){
+        return this.nik;
+    }
+    
+    //
+    
+    public void insertNoKTP(String isi){
+        this.noKTP.add(isi);
+    }
+    
+    public ArrayList <String> getRecordNoKTP(){
+        return this.noKTP;
     }
     
     //
@@ -119,5 +147,23 @@ public class dataPesan {
     
     public ArrayList <Double> getRecordSisaBayar(){
         return this.sisabayar;
+    }
+    
+    public void insertStatusBayar(String isi){
+        this.statusbayar.add(isi);
+    }
+    
+    public ArrayList <String> getRecordStatusBayar(){
+        return this.statusbayar;
+    }
+    
+    //
+    
+    public void insertKetPesan(String isi){
+        this.ketpesan.add(isi);
+    }
+    
+    public ArrayList <String> getRecordKetPesan(){
+        return this.ketpesan;
     }
 }

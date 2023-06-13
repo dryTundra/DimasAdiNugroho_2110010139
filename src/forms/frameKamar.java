@@ -56,7 +56,7 @@ public class frameKamar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setText("Kode");
+        jLabel1.setText("Kode Kamar");
 
         jLabel2.setText("Tipe");
 
@@ -265,7 +265,7 @@ public class frameKamar extends javax.swing.JFrame {
         // TODO add your handling code here:
         int i = Integer.valueOf(txtIndex.getText());
         
-        String isiDataKamar = "Kode : "+kamar.getRecordKode().get(i)+
+        String isiDataKamar = "Kode Kamar : "+kamar.getRecordKode().get(i)+
                               "\nTipe : "+kamar.getRecordTipe().get(i)+
                               "\nKapasitas : "+kamar.getRecordKapasitas().get(i)+
                               "\nFasilitas : "+kamar.getRecordFasilitas().get(i)+

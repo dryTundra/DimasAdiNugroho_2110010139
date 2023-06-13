@@ -65,7 +65,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel3" linkSize="1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtNikTamu" linkSize="2" min="-2" pref="109" max="-2" attributes="0"/>
+                              <Component id="txtNIK" linkSize="2" min="-2" pref="109" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel1" linkSize="1" min="-2" max="-2" attributes="0"/>
@@ -92,7 +92,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtNikTamu" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNIK" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -167,7 +167,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="NIK Tamu"/>
+        <Property name="text" type="java.lang.String" value="NIK"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -185,7 +185,7 @@
         <Property name="text" type="java.lang.String" value="Tanggal Check-Out"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNikTamu">
+    <Component class="javax.swing.JTextField" name="txtNIK">
     </Component>
     <Component class="javax.swing.JTextField" name="txtTglBatal">
     </Component>

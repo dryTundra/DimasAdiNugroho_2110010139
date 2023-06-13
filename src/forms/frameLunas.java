@@ -51,7 +51,7 @@ public class frameLunas extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         txtNoPes = new javax.swing.JTextField();
-        txtNik = new javax.swing.JTextField();
+        txtNIK = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -89,11 +89,11 @@ public class frameLunas extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setText("DATA LUNAS");
+        jLabel6.setText("DATA PELUNASAN");
 
         jLabel7.setText("No Pesan");
 
-        jLabel8.setText("NIK Tamu");
+        jLabel8.setText("NIK");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -147,14 +147,14 @@ public class frameLunas extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(txtNik, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(txtNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(22, 22, 22)))
                         .addGap(47, 47, 47))))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel1, jLabel2, jLabel3, jLabel4, jLabel5, jLabel7, jLabel8});
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtNik, txtNoLunas, txtNoPes, txtTgl, txtTotal, txtUbay, txtUkem});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtNIK, txtNoLunas, txtNoPes, txtTgl, txtTotal, txtUbay, txtUkem});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,7 +172,7 @@ public class frameLunas extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(txtNik, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNIK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -206,7 +206,7 @@ public class frameLunas extends javax.swing.JFrame {
         // TODO add your handling code here:
         lunas.insertNoLunas(txtNoLunas.getText());
         lunas.insertNoPes(txtNoPes.getText());
-        lunas.insertNik(txtNik.getText());
+        lunas.insertNIK(txtNIK.getText());
         lunas.insertTgl(txtTgl.getText());
         lunas.insertTotal(Double.valueOf(txtTotal.getText()));
         lunas.insertUBay(Double.valueOf(txtUbay.getText()));
@@ -216,7 +216,7 @@ public class frameLunas extends javax.swing.JFrame {
         
         txtNoLunas.setText("");
         txtNoPes.setText("");
-        txtNik.setText("");
+        txtNIK.setText("");
         txtTgl.setText("");
         txtTotal.setText("");
         txtUbay.setText("");
@@ -229,7 +229,7 @@ public class frameLunas extends javax.swing.JFrame {
         
         String isiDataLunas = "No Lunas : "+lunas.getRecordNoLunas().get(i)+
                               "\nNo Pesan : "+lunas.getRecordNoPes().get(i)+
-                              "\nNIK Tamu : "+lunas.getRecordNik().get(i)+
+                              "\nNIK : "+lunas.getRecordNIK().get(i)+
                               "\nTanggal : "+lunas.getRecordTgl().get(i)+
                               "\nTotal : "+lunas.getRecordTotal().get(i)+
                               "\nUang Bayar : "+lunas.getRecordUBay().get(i)+
@@ -299,7 +299,7 @@ public class frameLunas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField txtIndex;
-    private javax.swing.JTextField txtNik;
+    private javax.swing.JTextField txtNIK;
     private javax.swing.JTextField txtNoLunas;
     private javax.swing.JTextField txtNoPes;
     private javax.swing.JTextField txtTgl;

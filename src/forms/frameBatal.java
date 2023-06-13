@@ -40,7 +40,7 @@ public class frameBatal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        txtNikTamu = new javax.swing.JTextField();
+        txtNIK = new javax.swing.JTextField();
         txtTglBatal = new javax.swing.JTextField();
         txtCekIn = new javax.swing.JTextField();
         txtCekOut = new javax.swing.JTextField();
@@ -68,7 +68,7 @@ public class frameBatal extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("DATA BATAL");
 
-        jLabel3.setText("NIK Tamu");
+        jLabel3.setText("NIK");
 
         jLabel4.setText("Tanggal Batal");
 
@@ -114,7 +114,7 @@ public class frameBatal extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtNikTamu, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(18, 18, 18)
@@ -124,7 +124,7 @@ public class frameBatal extends javax.swing.JFrame {
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel1, jLabel3, jLabel4, jLabel5, jLabel6});
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtCekIn, txtCekOut, txtNikTamu, txtNoBatal, txtTglBatal});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtCekIn, txtCekOut, txtNIK, txtNoBatal, txtTglBatal});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,7 +138,7 @@ public class frameBatal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtNikTamu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNIK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -170,7 +170,7 @@ public class frameBatal extends javax.swing.JFrame {
     private void btnSimpanDataBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanDataBatalActionPerformed
         // TODO add your handling code here:
         batal.insertNoBatal(txtNoBatal.getText());
-        batal.insertNik(txtNikTamu.getText());
+        batal.insertNIK(txtNIK.getText());
         batal.insertTglBatal(txtTglBatal.getText());
         batal.insertCekIn(txtCekIn.getText());
         batal.insertCekOut(txtCekOut.getText());
@@ -178,7 +178,7 @@ public class frameBatal extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Data Batal Berhasil Disimpan");
         
         txtNoBatal.setText("");
-        txtNikTamu.setText("");
+        txtNIK.setText("");
         txtTglBatal.setText("");
         txtCekIn.setText("");
         txtCekOut.setText("");
@@ -189,7 +189,7 @@ public class frameBatal extends javax.swing.JFrame {
         int i = Integer.valueOf(txtIndex.getText());
         
         String isiDataBatal = "No Batal : "+batal.getRecordNoBatal().get(i)+
-                              "\nNIK Tamu : "+batal.getRecordNik().get(i)+
+                              "\nNIK : "+batal.getRecordNIK().get(i)+
                               "\nTanggal Batal : "+batal.getRecordTglBatal().get(i)+
                               "\nTanggal Check-In : "+batal.getRecordCekIn().get(i)+
                               "\nTanggal Check-Out : "+batal.getRecordCekOut().get(i);
@@ -244,7 +244,7 @@ public class frameBatal extends javax.swing.JFrame {
     private javax.swing.JTextField txtCekIn;
     private javax.swing.JTextField txtCekOut;
     private javax.swing.JTextField txtIndex;
-    private javax.swing.JTextField txtNikTamu;
+    private javax.swing.JTextField txtNIK;
     private javax.swing.JTextField txtNoBatal;
     private javax.swing.JTextField txtTglBatal;
     // End of variables declaration//GEN-END:variables
