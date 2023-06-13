@@ -12,9 +12,17 @@ import java.util.ArrayList;
  */
 public class dataBatal {
     private ArrayList<String> nobatal;
+    private ArrayList<String> nik;
+    private ArrayList<String> tglBatal;
+    private ArrayList<String> CekIn;
+    private ArrayList<String> CekOut;
     
     public dataBatal(){
         nobatal = new ArrayList<String>();
+        nik = new ArrayList<String>();
+        tglBatal = new ArrayList<String>();
+        CekIn = new ArrayList<String>();
+        CekOut = new ArrayList<String>();
     };
     
     public void insertNoBatal(String isi){
@@ -24,4 +32,42 @@ public class dataBatal {
     public ArrayList<String> getRecordNoBatal(){
         return this.nobatal;
     }
+    
+    //
+    
+    public void insertNik(String isi){
+        this.nik.add(isi);
+    }
+    
+    public ArrayList<String> getRecordNik(){
+        return this.nik;
+    }
+    
+    //
+    
+    public void insertTglBatal(String isi){
+        this.tglBatal.add(isi);
+    }
+    
+    public ArrayList<String> getRecordTglBatal(){
+        return this.tglBatal;
+    }
+    
+    //
+    
+    public void insertCekIn(String isi){
+        this.CekIn.add(isi);
+    }
+    
+    public ArrayList<String> getRecordCekIn(){
+        return this.CekIn;
+    }
+    
+    public void insertCekOut(String isi){
+        this.CekOut.add(isi);
+    }
+    
+    public ArrayList<String> getRecordCekOut(){
+        return this.CekOut;
+    }   
 }

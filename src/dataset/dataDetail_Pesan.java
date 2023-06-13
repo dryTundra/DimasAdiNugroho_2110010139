@@ -12,9 +12,13 @@ import java.util.ArrayList;
  */
 public class dataDetail_Pesan {
     private ArrayList<String> nopes;
+    private ArrayList<String> kode;
+    private ArrayList<Double> hargaKamar;
     
     public dataDetail_Pesan(){
-        nopes = new ArrayList<String>();        
+        nopes = new ArrayList<String>();
+        kode = new ArrayList<String>();
+        hargaKamar = new ArrayList<Double>();
     };
     
     public void insertNoPes(String isi){
@@ -23,5 +27,25 @@ public class dataDetail_Pesan {
     
     public ArrayList<String> getRecordNoPes(){
         return this.nopes;
+    }
+    
+    //
+    
+    public void insertKdKamar(String isi){
+        this.kode.add(isi);
+    }
+    
+    public ArrayList<String> getRecordKdKamar(){
+        return this.kode;
+    }
+    
+    //
+    
+    public void insertHargaKmr(double isi){
+        this.hargaKamar.add(isi);
+    }
+    
+    public ArrayList<Double> getRecordHargaKmr(){
+        return this.hargaKamar;
     }
 }
