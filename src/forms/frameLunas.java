@@ -210,7 +210,7 @@ public class frameLunas extends javax.swing.JFrame {
         total = Double.valueOf(txtTotal.getText());
         ubay = Double.valueOf(txtUbay.getText());
         
-        ukem = ubay-total;
+        ukem = total-ubay;
         
         txtUkem.setText(String.valueOf(ukem));
     }//GEN-LAST:event_btnHitungUKemActionPerformed
