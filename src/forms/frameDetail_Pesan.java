@@ -159,6 +159,8 @@ public class frameDetail_Pesan extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this,"Data Detail Pesan Berhasil Disimpan");
         
         txtNoPes.setText("");
+        txtKdKamar.setText("");
+        txtHargaKmr.setText("");
     }//GEN-LAST:event_btnSimpanDataDetail_PesanActionPerformed
 
     private void btnTampilDataDetail_PesanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampilDataDetail_PesanActionPerformed

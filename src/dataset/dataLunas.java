@@ -12,6 +12,8 @@ import java.util.ArrayList;
  */
 public class dataLunas {
     private ArrayList<String> nolunas;
+    private ArrayList<String> nopesan;
+    private ArrayList<String> nik;
     private ArrayList<String> tgl;
     private ArrayList<Double> total;
     private ArrayList<Double> ubay;
@@ -19,6 +21,8 @@ public class dataLunas {
     
     public dataLunas(){
         nolunas = new ArrayList<String>();
+        nopesan = new ArrayList<String>();
+        nik = new ArrayList<String>();
         tgl = new ArrayList<String>();
         total = new ArrayList<Double>();
         ubay = new ArrayList<Double>();
@@ -31,6 +35,26 @@ public class dataLunas {
     
     public ArrayList <String> getRecordNoLunas(){
         return this.nolunas;
+    }
+    
+    //
+    
+    public void insertNoPes(String isi){
+        this.nopesan.add(isi);
+    }
+    
+    public ArrayList <String> getRecordNoPes(){
+        return this.nopesan;
+    }
+    
+    //
+    
+    public void insertNik(String isi){
+        this.nik.add(isi);
+    }
+    
+    public ArrayList <String> getRecordNik(){
+        return this.nik;
     }
     
     //
