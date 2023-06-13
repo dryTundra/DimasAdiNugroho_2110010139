@@ -21,7 +21,6 @@ public class frameKaryawan extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         karyawan = new dataKaryawan();
-        
     }
 
     /**
@@ -192,6 +191,8 @@ public class frameKaryawan extends javax.swing.JFrame {
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel1, jLabel10, jLabel11, jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8, jLabel9});
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cmbJnsKel, txtAgama, txtAlamat, txtNIK, txtNama, txtNoRek, txtPassword, txtTelp, txtTglLahir, txtTmpLahir});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnKaryawanToKamar, btnKaryawanToTamu});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -332,8 +332,8 @@ public class framePesan extends javax.swing.JFrame {
         // TODO add your handling code here:
         double tobay, dp, sisa;
         
-        tobay = Double.parseDouble(txtToBay.getText());
-        dp = Double.parseDouble(txtDP.getText());
+        tobay = Double.valueOf(txtToBay.getText());
+        dp = Double.valueOf(txtDP.getText());
         
         sisa = tobay-dp;
         
