@@ -63,11 +63,11 @@
                       <Component id="txtHargaWeekday" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="107" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txtIndex" linkSize="3" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="btnTampilDataKamar" linkSize="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnKamarToPesan" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="106" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="txtIndex" linkSize="3" pref="71" max="32767" attributes="0"/>
+                  <Component id="btnTampilDataKamar" linkSize="3" max="32767" attributes="0"/>
+                  <Component id="btnKamarToPesan" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
           </Group>
@@ -140,7 +140,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Tipe"/>
+        <Property name="text" type="java.lang.String" value="Tipe Kamar"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -165,7 +165,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="HargaWeekend"/>
+        <Property name="text" type="java.lang.String" value="Harga Weekend"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtKode">
@@ -255,7 +255,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnKamarToPesan">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Pesan Kamar"/>
+        <Property name="text" type="java.lang.String" value="Pesan"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnKamarToPesanActionPerformed"/>

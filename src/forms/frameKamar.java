@@ -58,7 +58,7 @@ public class frameKamar extends javax.swing.JFrame {
 
         jLabel1.setText("Kode Kamar");
 
-        jLabel2.setText("Tipe");
+        jLabel2.setText("Tipe Kamar");
 
         jLabel3.setText("Kapasitas");
 
@@ -68,7 +68,7 @@ public class frameKamar extends javax.swing.JFrame {
 
         jLabel6.setText("Harga Weekday");
 
-        jLabel7.setText("HargaWeekend");
+        jLabel7.setText("Harga Weekend");
 
         cmbTipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Luxury", "Executive" }));
         cmbTipe.addActionListener(new java.awt.event.ActionListener() {
@@ -105,7 +105,7 @@ public class frameKamar extends javax.swing.JFrame {
             }
         });
 
-        btnKamarToPesan.setText("Pesan Kamar");
+        btnKamarToPesan.setText("Pesan");
         btnKamarToPesan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnKamarToPesanActionPerformed(evt);
@@ -151,11 +151,11 @@ public class frameKamar extends javax.swing.JFrame {
                         .addComponent(jLabel6)
                         .addGap(18, 18, 18)
                         .addComponent(txtHargaWeekday, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnTampilDataKamar)
-                    .addComponent(btnKamarToPesan))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtIndex, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                    .addComponent(btnTampilDataKamar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnKamarToPesan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(72, 72, 72))
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
@@ -268,7 +268,7 @@ public class frameKamar extends javax.swing.JFrame {
         int i = Integer.valueOf(txtIndex.getText());
         
         String isiDataKamar = "Kode Kamar : "+kamar.getRecordKode().get(i)+
-                              "\nTipe : "+kamar.getRecordTipe().get(i)+
+                              "\nTipe Kamar : "+kamar.getRecordTipe().get(i)+
                               "\nKapasitas : "+kamar.getRecordKapasitas().get(i)+
                               "\nFasilitas : "+kamar.getRecordFasilitas().get(i)+
                               "\nStatus : "+kamar.getRecordStatus().get(i)+

@@ -387,7 +387,7 @@ public class framePesan extends javax.swing.JFrame {
                               "\nLama : "+pesan.getRecordLama().get(i)+
                               "\nNama Chas : "+pesan.getRecordNmChas().get(i)+
                               "\nTotal Bayar : "+pesan.getRecordToBay().get(i)+
-                              "\nDown-payment : "+pesan.getRecordDP().get(i)+
+                              "\nDown-Payment : "+pesan.getRecordDP().get(i)+
                               "\nSisa Bayar : "+pesan.getRecordSisaBayar().get(i)+
                               "\nStatus Bayar : "+pesan.getRecordStatusBayar().get(i)+
                               "\nKeterangan : "+pesan.getRecordKetPesan().get(i);

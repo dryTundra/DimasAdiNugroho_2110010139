@@ -290,9 +290,9 @@ public class frameKaryawan extends javax.swing.JFrame {
                               "\nAgama : "+karyawan.getRecordAgama().get(i)+
                               "\nJenis Kelamin : "+karyawan.getRecordJnsKel().get(i)+
                               "\nJabatan : "+karyawan.getRecordJabatan().get(i)+
-                              "\nNo Rekening : "+karyawan.getRecordNoRek().get(i)+
+                              "\nNomor Rekening : "+karyawan.getRecordNoRek().get(i)+
                               "\nAlamat : "+karyawan.getRecordAlamat().get(i)+
-                              "\nTelpon : "+karyawan.getRecordTelp().get(i)+
+                              "\nTelepon : "+karyawan.getRecordTelp().get(i)+
                               "\nPassword : "+karyawan.getRecordPassword().get(i);
         
         JOptionPane.showMessageDialog(this, isiDataKaryawan);

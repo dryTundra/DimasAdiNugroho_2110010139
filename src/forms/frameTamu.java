@@ -197,7 +197,7 @@ public class frameTamu extends javax.swing.JFrame {
         String isiDataTamu = "No KTP : "+tamu.getRecordNoKTP().get(i)+
                              "\nNama Tamu : "+tamu.getRecordNmTamu().get(i)+
                              "\nAlamat : "+tamu.getRecordAlamat().get(i)+
-                             "\nNo Telpon : "+tamu.getRecordNoTelp().get(i);
+                             "\nNomor Telepon : "+tamu.getRecordNoTelp().get(i);
         
         JOptionPane.showMessageDialog(this, isiDataTamu);
     }//GEN-LAST:event_btnTampilDataTamuActionPerformed
