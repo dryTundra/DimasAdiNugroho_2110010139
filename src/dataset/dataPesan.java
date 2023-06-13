@@ -14,7 +14,7 @@ public class dataPesan {
     private ArrayList<String> nopesan;
     private ArrayList<String> nik;
     private ArrayList<String> noKTP;
-    private ArrayList<String> tgl;
+    private ArrayList<String> tglpesan;
     private ArrayList<String> tglin;
     private ArrayList<String> tglout;
     private ArrayList<Integer> lama;
@@ -29,7 +29,7 @@ public class dataPesan {
         nopesan = new ArrayList<String>();
         nik = new ArrayList<String>();
         noKTP = new ArrayList<String>();
-        tgl = new ArrayList<String>();
+        tglpesan = new ArrayList<String>();
         tglin = new ArrayList<String>();
         tglout = new ArrayList<String>();
         lama = new ArrayList<Integer>();
@@ -51,11 +51,11 @@ public class dataPesan {
     
     //
     
-    public void insertNik(String isi){
+    public void insertNIK(String isi){
         this.nik.add(isi);
     }
     
-    public ArrayList <String> getRecordNik(){
+    public ArrayList <String> getRecordNIK(){
         return this.nik;
     }
     
@@ -71,12 +71,12 @@ public class dataPesan {
     
     //
     
-    public void insertTgl(String isi){
-        this.tgl.add(isi);
+    public void insertTglPesan(String isi){
+        this.tglpesan.add(isi);
     }
     
-    public ArrayList <String> getRecordTgl(){
-        return this.tgl;
+    public ArrayList <String> getRecordTglPesan(){
+        return this.tglpesan;
     }
     
     //

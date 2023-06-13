@@ -25,77 +25,70 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="361" max="32767" attributes="0"/>
-                              <Component id="txtIndex" min="-2" pref="77" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel1" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtNoPes" linkSize="2" pref="71" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel11" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtNikKaryawan" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel4" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtTglOut" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="jLabel8" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel9" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
-                                              <Component id="jLabel7" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
-                                              <Component id="jLabel6" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
-                                              <Component id="jLabel5" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
-                                              <Component id="jLabel3" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
-                                              <Component id="jLabel2" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="jLabel12" linkSize="1" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
-                                          <Component id="jLabel13" linkSize="1" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
-                                          <Component id="jLabel14" linkSize="1" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jLabel1" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="txtNoPes" linkSize="2" pref="71" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="jLabel11" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="txtNikKaryawan" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel4" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="txtTglOut" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabel8" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel9" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
+                                          <Component id="jLabel7" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
+                                          <Component id="jLabel6" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
+                                          <Component id="jLabel5" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
+                                          <Component id="jLabel3" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
+                                          <Component id="jLabel2" linkSize="1" min="-2" pref="37" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="cmbNmChas" linkSize="2" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="cmbStatusBayar" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="txtKetPesan" linkSize="2" alignment="0" pref="71" max="32767" attributes="0"/>
+                                      <Component id="jLabel12" linkSize="1" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                                      <Component id="jLabel13" linkSize="1" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                                      <Component id="jLabel14" linkSize="1" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="cmbNmChas" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="cmbStatusBayar" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtKetPesan" linkSize="2" alignment="0" pref="71" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="txtTglPesan" linkSize="2" alignment="0" pref="71" max="32767" attributes="0"/>
+                                              <Component id="txtSisaBayar" linkSize="2" alignment="0" pref="103" max="32767" attributes="0"/>
+                                              <Component id="txtTglIn" linkSize="2" pref="71" max="32767" attributes="0"/>
+                                              <Component id="txtLama" linkSize="2" alignment="0" pref="71" max="32767" attributes="0"/>
+                                              <Component id="txtToBay" linkSize="2" pref="71" max="32767" attributes="0"/>
+                                              <Component id="txtDP" linkSize="2" pref="71" max="32767" attributes="0"/>
+                                              <Component id="txtNoKtpTamu" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="txtTgl" linkSize="2" alignment="0" pref="71" max="32767" attributes="0"/>
-                                                  <Component id="txtSisaBayar" linkSize="2" alignment="0" pref="103" max="32767" attributes="0"/>
-                                                  <Component id="txtTglIn" linkSize="2" pref="71" max="32767" attributes="0"/>
-                                                  <Component id="txtLama" linkSize="2" alignment="0" pref="71" max="32767" attributes="0"/>
-                                                  <Component id="txtToBay" linkSize="2" pref="71" max="32767" attributes="0"/>
-                                                  <Component id="txtDP" linkSize="2" pref="71" max="32767" attributes="0"/>
-                                                  <Component id="txtNoKtpTamu" linkSize="2" min="-2" pref="71" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                                  <Component id="btnHitungSisaBayar" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" attributes="0">
-                                                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                                                      <Component id="btnHitungSisaBayar" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="btnPesanToDetail_Pesan" linkSize="3" max="32767" attributes="0"/>
-                                                          <Component id="btnPesanToInchas" linkSize="3" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="btnPesanToTamu" alignment="0" max="32767" attributes="0"/>
-                                                      </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="btnPesanToDetail_Pesan" linkSize="3" max="32767" attributes="0"/>
+                                                      <Component id="btnPesanToInchas" linkSize="3" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="btnPesanToTamu" alignment="0" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -104,16 +97,23 @@
                               </Group>
                           </Group>
                       </Group>
-                  </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btnSimpanDataPesan" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="289" max="-2" attributes="0"/>
-                          <Component id="btnTampilDataPesan" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="btnSimpanDataPesan" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="btnTampilDataPesan" linkSize="5" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace pref="342" max="32767" attributes="0"/>
+                                  <Component id="txtIndex" linkSize="5" min="-2" pref="77" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="52" max="32767" attributes="0"/>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -151,7 +151,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtTgl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtTglPesan" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -219,7 +219,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Tanggal"/>
+        <Property name="text" type="java.lang.String" value="Tanggal Pesan"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -259,7 +259,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtNoPes">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtTgl">
+    <Component class="javax.swing.JTextField" name="txtTglPesan">
     </Component>
     <Component class="javax.swing.JTextField" name="txtTglIn">
     </Component>

@@ -39,7 +39,7 @@ public class frameLunas extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         txtNoLunas = new javax.swing.JTextField();
-        txtTgl = new javax.swing.JTextField();
+        txtTglLunas = new javax.swing.JTextField();
         txtTotal = new javax.swing.JTextField();
         txtUbay = new javax.swing.JTextField();
         txtUkem = new javax.swing.JTextField();
@@ -52,12 +52,16 @@ public class frameLunas extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         txtNoPes = new javax.swing.JTextField();
         txtNIK = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        txtTglCekIn = new javax.swing.JTextField();
+        txtTglCekOut = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("No Lunas");
 
-        jLabel2.setText("Tanggal");
+        jLabel2.setText("Tanggal Lunas");
 
         jLabel3.setText("Total");
 
@@ -95,28 +99,53 @@ public class frameLunas extends javax.swing.JFrame {
 
         jLabel8.setText("NIK");
 
+        jLabel9.setText("Tanggal Check-In");
+
+        jLabel10.setText("Tanggal Check-Out");
+
+        txtTglCekOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTglCekOutActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(0, 30, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnSimpanDataLunas)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnTampilDataLunas)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(22, 22, 22))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtTglLunas))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtNoLunas, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtNoPes, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel9)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtTglCekIn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(159, 159, 159))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -127,34 +156,30 @@ public class frameLunas extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txtTgl))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txtNoLunas, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel5)
                                         .addGap(18, 18, 18)
                                         .addComponent(txtUkem, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(btnHitungUKem))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel10)
                                         .addGap(18, 18, 18)
-                                        .addComponent(txtNoPes, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txtNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(22, 22, 22)))
-                        .addGap(47, 47, 47))))
+                                        .addComponent(txtTglCekOut, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(69, 69, 69))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnSimpanDataLunas)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnTampilDataLunas)
+                            .addComponent(txtIndex, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(44, 44, 44))))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel1, jLabel2, jLabel3, jLabel4, jLabel5, jLabel7, jLabel8});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel1, jLabel10, jLabel2, jLabel3, jLabel4, jLabel5, jLabel7, jLabel8, jLabel9});
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtNIK, txtNoLunas, txtNoPes, txtTgl, txtTotal, txtUbay, txtUkem});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtNIK, txtNoLunas, txtNoPes, txtTglCekIn, txtTglCekOut, txtTglLunas, txtTotal, txtUbay, txtUkem});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnTampilDataLunas, txtIndex});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -176,7 +201,15 @@ public class frameLunas extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtTgl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTglLunas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(txtTglCekIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(txtTglCekOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -190,13 +223,13 @@ public class frameLunas extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(txtUkem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnHitungUKem))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addGap(42, 42, 42)
                 .addComponent(txtIndex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnTampilDataLunas)
                     .addComponent(btnSimpanDataLunas))
-                .addGap(41, 41, 41))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
@@ -207,7 +240,9 @@ public class frameLunas extends javax.swing.JFrame {
         lunas.insertNoLunas(txtNoLunas.getText());
         lunas.insertNoPes(txtNoPes.getText());
         lunas.insertNIK(txtNIK.getText());
-        lunas.insertTgl(txtTgl.getText());
+        lunas.insertTglLunas(txtTglLunas.getText());
+        lunas.insertTglCekIn(txtTglCekIn.getText());
+        lunas.insertTglCekOut(txtTglCekOut.getText());
         lunas.insertTotal(Double.valueOf(txtTotal.getText()));
         lunas.insertUBay(Double.valueOf(txtUbay.getText()));
         lunas.insertUKem(Double.valueOf(txtUkem.getText()));
@@ -217,7 +252,9 @@ public class frameLunas extends javax.swing.JFrame {
         txtNoLunas.setText("");
         txtNoPes.setText("");
         txtNIK.setText("");
-        txtTgl.setText("");
+        txtTglLunas.setText("");
+        txtTglCekIn.setText("");
+        txtTglCekOut.setText("");
         txtTotal.setText("");
         txtUbay.setText("");
         txtUkem.setText("");
@@ -230,7 +267,9 @@ public class frameLunas extends javax.swing.JFrame {
         String isiDataLunas = "No Lunas : "+lunas.getRecordNoLunas().get(i)+
                               "\nNo Pesan : "+lunas.getRecordNoPes().get(i)+
                               "\nNIK : "+lunas.getRecordNIK().get(i)+
-                              "\nTanggal : "+lunas.getRecordTgl().get(i)+
+                              "\nTanggal Lunas : "+lunas.getRecordTglLunas().get(i)+
+                              "\nTanggal Check-In : "+lunas.getRecordTglCekIn().get(i)+
+                              "\nTanggal Check-Out : "+lunas.getRecordTglCekOut().get(i)+
                               "\nTotal : "+lunas.getRecordTotal().get(i)+
                               "\nUang Bayar : "+lunas.getRecordUBay().get(i)+
                               "\nUang Kembalian : "+lunas.getRecordUKem().get(i);
@@ -250,6 +289,10 @@ public class frameLunas extends javax.swing.JFrame {
         
         txtUkem.setText(String.valueOf(ukem));
     }//GEN-LAST:event_btnHitungUKemActionPerformed
+
+    private void txtTglCekOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTglCekOutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTglCekOutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -291,6 +334,7 @@ public class frameLunas extends javax.swing.JFrame {
     private javax.swing.JButton btnSimpanDataLunas;
     private javax.swing.JButton btnTampilDataLunas;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -298,11 +342,14 @@ public class frameLunas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField txtIndex;
     private javax.swing.JTextField txtNIK;
     private javax.swing.JTextField txtNoLunas;
     private javax.swing.JTextField txtNoPes;
-    private javax.swing.JTextField txtTgl;
+    private javax.swing.JTextField txtTglCekIn;
+    private javax.swing.JTextField txtTglCekOut;
+    private javax.swing.JTextField txtTglLunas;
     private javax.swing.JTextField txtTotal;
     private javax.swing.JTextField txtUbay;
     private javax.swing.JTextField txtUkem;

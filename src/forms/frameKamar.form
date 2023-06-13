@@ -65,8 +65,8 @@
               </Group>
               <EmptySpace pref="107" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txtIndex" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="btnTampilDataKamar" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtIndex" linkSize="3" min="-2" pref="71" max="-2" attributes="0"/>
+                  <Component id="btnTampilDataKamar" linkSize="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnKamarToPesan" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>

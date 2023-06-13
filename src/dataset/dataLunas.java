@@ -14,7 +14,9 @@ public class dataLunas {
     private ArrayList<String> nolunas;
     private ArrayList<String> nopesan;
     private ArrayList<String> nik;
-    private ArrayList<String> tgl;
+    private ArrayList<String> tgllunas;
+    private ArrayList<String> tglcekin;
+    private ArrayList<String> tglcekout;
     private ArrayList<Double> total;
     private ArrayList<Double> ubay;
     private ArrayList<Double> ukem;
@@ -23,7 +25,9 @@ public class dataLunas {
         nolunas = new ArrayList<String>();
         nopesan = new ArrayList<String>();
         nik = new ArrayList<String>();
-        tgl = new ArrayList<String>();
+        tgllunas = new ArrayList<String>();
+        tglcekin = new ArrayList<String>();
+        tglcekout = new ArrayList<String>();
         total = new ArrayList<Double>();
         ubay = new ArrayList<Double>();
         ukem = new ArrayList<Double>();
@@ -59,12 +63,32 @@ public class dataLunas {
     
     //
     
-    public void insertTgl(String isi){
-        this.tgl.add(isi);
+    public void insertTglLunas(String isi){
+        this.tgllunas.add(isi);
     }
     
-    public ArrayList <String> getRecordTgl(){
-        return this.tgl;
+    public ArrayList <String> getRecordTglLunas(){
+        return this.tgllunas;
+    }
+    
+    //
+    
+    public void insertTglCekIn(String isi){
+        this.tglcekin.add(isi);
+    }
+    
+    public ArrayList <String> getRecordTglCekIn(){
+        return this.tglcekin;
+    }
+    
+    //
+    
+    public void insertTglCekOut(String isi){
+        this.tglcekout.add(isi);
+    }
+    
+    public ArrayList <String> getRecordTglCekOut(){
+        return this.tglcekout;
     }
     
     //

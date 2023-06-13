@@ -28,7 +28,6 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnSimpanDataKaryawan" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel1" linkSize="1" min="-2" max="-2" attributes="0"/>
@@ -58,19 +57,13 @@
                                   <Component id="cmbJabatan" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
+                          <Component id="btnSimpanDataKaryawan" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
-                              <Component id="txtIndex" min="-2" pref="71" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btnTampilDataKaryawan" max="32767" attributes="0"/>
-                                  <Component id="btnKaryawanToKamar" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="btnTampilDataKaryawan" linkSize="3" max="32767" attributes="0"/>
+                          <Component id="txtIndex" linkSize="3" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="btnKaryawanToKamar" min="-2" pref="114" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -144,14 +137,15 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                   <Component id="txtPassword" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtIndex" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtIndex" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnSimpanDataKaryawan" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnTampilDataKaryawan" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
