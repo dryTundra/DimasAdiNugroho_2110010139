@@ -12,6 +12,7 @@ import java.util.ArrayList;
  */
 public class dataBatal {
     private ArrayList<String> nobatal;
+    private ArrayList<String> nopesan;
     private ArrayList<String> nik;
     private ArrayList<String> tglBatal;
     private ArrayList<String> CekIn;
@@ -19,6 +20,7 @@ public class dataBatal {
     
     public dataBatal(){
         nobatal = new ArrayList<String>();
+        nopesan = new ArrayList<String>();
         nik = new ArrayList<String>();
         tglBatal = new ArrayList<String>();
         CekIn = new ArrayList<String>();
@@ -31,6 +33,16 @@ public class dataBatal {
     
     public ArrayList<String> getRecordNoBatal(){
         return this.nobatal;
+    }
+    
+    //
+    
+    public void insertNoPesan(String isi){
+        this.nopesan.add(isi);
+    }
+    
+    public ArrayList<String> getRecordNoPesan(){
+        return this.nopesan;
     }
     
     //
